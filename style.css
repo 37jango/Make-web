@@ -35,7 +35,6 @@
 *::before,
 *::after {
 box-sizing: border-box;
-text-align: center;
 }
 
 html {
@@ -70,6 +69,9 @@ height: 0;
 overflow: visible;
 width: 30%;
 }
+
+
+
 
 h1, h2, h3, h4, h5, h6 {
 margin-top: 0;
@@ -539,6 +541,25 @@ padding-left: 1.5rem;
 margin-right: auto;
 margin-left: auto;
 }
+
+.container{
+    text-align: center;
+}
+
+
+.contact-container {
+padding-right: 1.5rem;
+padding-left: 1.5rem;
+margin-right: auto;
+margin-left: auto;
+display: inline-block;
+border: 0.25rem solid var(--gray);
+width: 70%;
+margin-right: 0;
+margin-left: 0;
+text-align: start;
+}
+
 @media (min-width: 576px) {
 .container {
     max-width: 540px;
@@ -3163,6 +3184,12 @@ bottom: auto;
     margin-bottom: 20px;
 }
 
+
+
+.contact .divider {
+    max-width: 250em;
+}
+
 .dropdown-divider {
 height: 0;
 margin: 0.5rem 0;
@@ -3983,7 +4010,7 @@ position: relative;
 display: flex;
 flex-wrap: wrap;
 align-items: center;
-justify-content: space-between;
+justify-content: space-evenly;
 padding: 0.5rem 1rem;
 }
 .navbar .container,
@@ -6168,7 +6195,7 @@ background-color: #dae0e5 !important;
 }
 
 .bg-dark {
-background-color: #343a40 !important;
+background-color: #5a6269 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -10077,20 +10104,12 @@ line-height: 3.1rem;
 }
 
 #mainNav {
-padding-top: 1rem;
-padding-bottom: 1rem;
-font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-font-weight: 700;
+font-weight: 500;
 }
 #mainNav .navbar-brand {
 color: #fff;
 }
-#mainNav .navbar-nav {
-margin-top: 1rem;
-}
-#mainNav .navbar-nav li.nav-item a.nav-link {
-color: #fff;
-}
+
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
 color: #1abc9c;
 }
@@ -10107,8 +10126,7 @@ padding: 0.8rem;
 
 @media (min-width: 992px) {
 #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+
     transition: padding-top 0.3s, padding-bottom 0.3s;
 }
 #mainNav .navbar-brand {
@@ -10120,16 +10138,14 @@ padding: 0.8rem;
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #1abc9c;
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-    color: #fff;
-    background: #1abc9c;
+    color: #1abc9c ;
 }
 
 #mainNav.navbar-shrink {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.5em;
@@ -10167,9 +10183,11 @@ width: 15rem;
 cursor: pointer;
 position: relative;
 display: block;
-max-width: 25rem;
-border-radius: 0.5rem;
+max-width: 15rem;
+border-radius: 20rem;
 overflow: hidden;
+padding-left: 15px;
+padding-right: 15px;
 }
 .portfolio .portfolio-item .portfolio-item-caption {
 position: absolute;
@@ -10201,9 +10219,9 @@ position: absolute;
 z-index: 1;
 right: 1.5rem;
 top: 1rem;
-font-size: 3rem;
-line-height: 3rem;
-color: #1abc9c;
+font-size: 2rem;
+line-height: 2rem;
+color: var(--dark);
 opacity: 1;
 }
 
@@ -10262,6 +10280,7 @@ color: #fff;
 
 .copyright {
 background-color: #1a252f;
+padding: 200px 0 200px 0 ;
 }
 
 .padding-left {
@@ -10277,7 +10296,7 @@ background-color: #1a252f;
 .title,
 .title:hover{
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 2.3rem;
 }
 
 .carousel-inner img {
@@ -10294,10 +10313,43 @@ background-color: #1a252f;
     border-color: var(--gray);
 }
 
-.container {
-    text-align: center;
-}
 
 footer {
     color: var(--white);
+}
+
+#section1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#section1 .card {
+    width: 100px;
+}
+
+.padding-pf {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 1745px) {
+    .card {
+    width: 400px !important;
+    }
+}
+
+
+@media screen and (min-width: 1745px) {
+    .padding-pf {
+    padding: 1rem;
+    }
+}
+
+.nav-link-title {
+    padding: 0px;
+    margin-left: 250px;
+    display: block;
+}
+
+.nav-link-title:hover, .nav-link-title:focus {
+    text-decoration: none;
 }
